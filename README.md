@@ -2,6 +2,43 @@
 
 A Flutter mobile app for browsing and managing AI prompts with Firebase backend.
 
+## Download APK
+
+- **Direct download (placeholder):** If an APK is published as a GitHub Release you can download it here:
+
+  **Direct download:** the release APK for this branch is available here:
+
+  [Download app-release.apk (add-apk branch)](https://raw.githubusercontent.com/mrkrisshu/PromptBoard/add-apk/releases/app-release.apk)
+
+  > Note: the APK is stored in the `releases/` folder on the `add-apk` branch. GitHub will warn for files larger than 50 MB — using GitHub Releases or Git LFS is recommended for production distribution.
+
+- **Build locally (recommended):** to create the release APK on your machine run:
+
+  ```powershell
+  flutter build apk --release
+  # the generated APK will be in: build\app\outputs\flutter-apk\app-release.apk
+  ```
+
+- **How to publish the APK to GitHub (two options):**
+  - GitHub Releases (recommended):
+    1. Build the APK locally (`flutter build apk --release`).
+    2. Open your repository on GitHub → Releases → Draft a new release.
+    3. Set a tag (e.g. `v1.0.0`) and attach `app-release.apk` as a release asset.
+
+  - Commit into this repository (not recommended for large binaries):
+    ```powershell
+    git checkout -b add-apk
+    mkdir releases
+    copy .\build\app\outputs\flutter-apk\app-release.apk releases\app-release.apk
+    git add releases\app-release.apk
+    git commit -m "Add app-release.apk"
+    git push --set-upstream origin add-apk
+    ```
+
+  After pushing, open a Pull Request so the APK is merged to the default branch.
+
+If you want, provide the `app-release.apk` file here (upload it), or tell me whether you'd like me to add the placeholder link only. If you upload or place the actual APK in the workspace I will add it to the repository and update the README link to point directly to it.
+
 ## Setup Instructions
 
 ### Prerequisites
